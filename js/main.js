@@ -25,9 +25,9 @@ form.addEventListener('submit', (evento) => {
 
         atualizaElemento(itemAtual)
 
-        item[existe.id] = itemAtual
+        item[item.findIndex(elemento => elemento.id === existe.id)] = itemAtual
        }else{
-        itemAtual.id = item.length
+        itemAtual.id = item[item.length -1] ? (item[item.length -1]).id +1 : 0
         
         criaElemento(itemAtual)
 
